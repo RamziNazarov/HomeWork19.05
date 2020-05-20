@@ -335,7 +335,6 @@
             this.txbRes.Location = new System.Drawing.Point(12, 12);
             this.txbRes.Name = "txbRes";
             this.txbRes.ReadOnly = true;
-            this.txbRes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txbRes.Size = new System.Drawing.Size(340, 40);
             this.txbRes.TabIndex = 27;
             // 
@@ -383,7 +382,7 @@
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
