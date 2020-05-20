@@ -31,38 +31,47 @@ namespace HomeWork19._05
             btn8.Click += AddNumber_Click;
             btn9.Click += AddNumber_Click;
             btnDot.Click += AddNumber_Click;
-            btnC.Click += (s,a) => { txbRes.Text = ""; };
+            btnPlus.Click += Calculate_Click;
+            btnMin.Click += Calculate_Click;
+            btnDel.Click += Calculate_Click;
+            btnUm.Click += Calculate_Click;
+            btnProc.Click += Calculate_Click;
+            btnC.Click += (s, a) => { txbRes.Text = ""; };
             btnBack.Click += (s, a) =>
             {
-                txbRes.Text =  (!string.IsNullOrEmpty(txbRes.Text))?txbRes.Text.Substring(0, txbRes.Text.Length - 1):"";
+                txbRes.Text = (!string.IsNullOrEmpty(txbRes.Text)) ? txbRes.Text.Substring(0, txbRes.Text.Length - 1) : "";
 
             };
-            btnSqt.Click += (s,a)=>
+            btnSqt.Click += (s, a) =>
             {
-                txbRes.Text = (!string.IsNullOrEmpty(txbRes.Text))?Math.Sqrt(double.Parse(txbRes.Text)).ToString():"";
+                txbRes.Text = (!string.IsNullOrEmpty(txbRes.Text)) ? Math.Sqrt(double.Parse(txbRes.Text)).ToString() : "";
             };
             btnMS.Click += (s, a) =>
             {
-                if(double.TryParse(txbRes.Text,out A))
-                txbMem.Text = txbRes.Text;
+                if (double.TryParse(txbRes.Text, out A))
+                    txbMem.Text = txbRes.Text;
             };
-            btnMC.Click += (s, a) =>
-            {
-                txbMem.Text = "";
-            };
+            btnMC.Click += (s, a) => {txbMem.Text = ""; };
             btnMR.Click += (s, a) =>
             {
-                txbRes.Text = (!string.IsNullOrEmpty(txbMem.Text))?txbMem.Text:txbRes.Text;
+                txbRes.Text = (!string.IsNullOrEmpty(txbMem.Text))?txbMem.Text
+                :txbRes.Text;
             };
             btnMPlus.Click += (s, a) =>
             {
                 if(!string.IsNullOrEmpty(txbRes.Text))
-                txbMem.Text = (!string.IsNullOrEmpty(txbMem.Text))?(double.Parse(txbMem.Text) + double.Parse(txbRes.Text)).ToString():txbRes.Text;
+                txbMem.Text = (!string.IsNullOrEmpty(txbMem.Text))?(double.Parse(txbMem.Text) + double.Parse(txbRes.Text)).ToString()
+                    :txbRes.Text;
             };
             btnPlusMinus.Click += AddNumber_Click;
             btnRes.Click += (s, a) =>
             {
-                txbRes.Text = (Calc == "+") ? (B + A).ToString() : (Calc == "-")? (B - A).ToString():(Calc == "*")?(B*A).ToString():(Calc == "/")?(A != 0)?(B/A).ToString():"На ноль делить нельзя!":(Calc == "%") ? (A != 0) ? (B % A).ToString() : "На ноль делить нельзя!" : txbRes.Text;
+                txbRes.Text = (Calc == "+") ? (B + A).ToString() 
+                : (Calc == "-")? (B - A).ToString()
+                :(Calc == "*")?(B*A).ToString()
+                :(Calc == "/")?(A != 0)?(B/A).ToString():"На ноль делить нельзя!"
+                :(Calc == "%") ? (A != 0) ? (B % A).ToString() : "На ноль делить нельзя!" 
+                : txbRes.Text;
             };
             btnCE.Click += (s, a) =>
             {
@@ -74,11 +83,6 @@ namespace HomeWork19._05
                 if(double.TryParse(txbRes.Text,out A))
                 A = double.Parse(txbRes.Text);
             };
-            btnPlus.Click += Calculate_Click;
-            btnMin.Click += Calculate_Click;
-            btnDel.Click += Calculate_Click;
-            btnUm.Click += Calculate_Click;
-            btnProc.Click += Calculate_Click;
             btn1DelX.Click += (s, a) =>
             {
                 if (txbRes.Text != "0")
