@@ -166,7 +166,7 @@
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(50, 40);
             this.btnDot.TabIndex = 10;
-            this.btnDot.Text = ".";
+            this.btnDot.Text = ",";
             this.btnDot.UseVisualStyleBackColor = true;
             // 
             // btn0
@@ -331,20 +331,20 @@
             // 
             // txbRes
             // 
-            this.txbRes.Enabled = false;
             this.txbRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txbRes.Location = new System.Drawing.Point(12, 12);
             this.txbRes.Name = "txbRes";
+            this.txbRes.ReadOnly = true;
             this.txbRes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txbRes.Size = new System.Drawing.Size(340, 40);
             this.txbRes.TabIndex = 27;
             // 
             // txbMem
             // 
-            this.txbMem.Enabled = false;
             this.txbMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txbMem.Location = new System.Drawing.Point(12, 59);
             this.txbMem.Name = "txbMem";
+            this.txbMem.ReadOnly = true;
             this.txbMem.Size = new System.Drawing.Size(60, 40);
             this.txbMem.TabIndex = 28;
             // 

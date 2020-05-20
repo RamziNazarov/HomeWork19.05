@@ -16,7 +16,6 @@ namespace HomeWork19._05
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             btn0.Click += AddNumber_Click;
@@ -36,18 +35,35 @@ namespace HomeWork19._05
                 txbRes.Text =  (!string.IsNullOrEmpty(txbRes.Text))?txbRes.Text.Substring(0, txbRes.Text.Length - 1):"";
 
             };
+            btnSqt.Click += (s,a)=>
+            {
+                txbRes.Text = (!string.IsNullOrEmpty(txbRes.Text))?Math.Sqrt(double.Parse(txbRes.Text)).ToString():"";
+            };
+            btnMS.Click += (s, a) =>
+            {
+                txbMem.Text = txbRes.Text;
+            };
+            btnMC.Click += (s, a) =>
+            {
+                txbMem.Text = "";
+            };
+            btnMR.Click += (s, a) =>
+            {
+                txbRes.Text = (!string.IsNullOrEmpty(txbMem.Text))?txbMem.Text:txbRes.Text;
+            };
         }
         private void AddNumber_Click(object sender, EventArgs e)
         {
-            if ((sender as Button).Text == ".")
+            var a = sender as Button;
+            if (a.Text == ",")
             {
                 char[] numbers = txbRes.Text.ToCharArray();
-                if (!numbers.Contains('.'))
-                    txbRes.Text = txbRes.Text + (sender as Button).Text;
+                if (!numbers.Contains(','))
+                    txbRes.Text = txbRes.Text + a.Text;
             }
             else
             {
-                txbRes.Text = txbRes.Text + (sender as Button).Text;
+                txbRes.Text = txbRes.Text + a.Text;
             }
         }
     }
